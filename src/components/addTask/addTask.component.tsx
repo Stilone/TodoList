@@ -1,6 +1,10 @@
 import React, {useState} from 'react';
-import {iAddTaskProps} from '../../types/task';
+import {iTask} from '../../types/task';
 import {AddTaskInput, AddTaskTitle, NewTaskComponent, AddButton} from './newTask.styles';
+
+interface iAddTaskProps {
+    onAddTask: (inputValue: iTask) => void;
+}
 
 export const AddTaskComponent: React.FC<iAddTaskProps> = ({onAddTask}) => {
     const [inputValue, setInputValue] = useState({userId: 0, id: 0, title: '', completed: false});
@@ -9,13 +13,13 @@ export const AddTaskComponent: React.FC<iAddTaskProps> = ({onAddTask}) => {
         const newValue = {...inputValue}
         newValue.title = event.target.value
         setInputValue(newValue)
-    }
+    };
 
     return (
         <NewTaskComponent>
             <AddTaskTitle>New Task:</AddTaskTitle>
             <AddTaskInput
-                type="text"
+                type='text'
                 value={inputValue.title}
                 onChange={(event) => handleChange(event)}
             />

@@ -1,4 +1,10 @@
 import React, {useEffect, useState} from 'react';
+import {useQuery} from 'react-query';
+import {iTask} from '../../types/task';
+import {getTask} from '../../api/tasks';
+import {TaskComponent} from '../task/task.component';
+import {LoadingComponent} from '../loading/loading.component';
+import {AddTaskComponent} from '../addTask/addTask.component';
 import {
     Author,
     Container,
@@ -10,12 +16,6 @@ import {
     TodoButtonDelete,
     TodoTitle,
 } from './todo.styles';
-import {TaskComponent} from '../task/task.component';
-import {iTask} from '../../types/task';
-import {useQuery} from 'react-query';
-import {getTask} from '../../api/tasks';
-import {LoadingComponent} from '../loading/loading.component'
-import {AddTaskComponent} from '../addTask/addTask.component';
 
 export const TodoComponent = () => {
     const [value, setValue] = useState<iTask[]>([]);
@@ -23,22 +23,21 @@ export const TodoComponent = () => {
     const {isLoading, data, isSuccess} = useQuery<iTask[]>('getData', () => getTask());
 
     useEffect(() => {
-        const check = (accum: iTask[], item: iTask) => {
-            if (accum.length < 4 && Math.round(Math.random() * 100) + 1 <= 25) {
-                accum.push(item);
-            }
-            return accum
-        };
         if (isSuccess && Array.isArray(data)) {
-            const newData: iTask[] = data.reduce(check, []);
+            const newData = data.reduce((accum: iTask[], item) => {
+                if (accum.length < 4 && Math.round(Math.random() * 100) + 1 <= 25) {
+                    accum.push(item);
+                }
+                return accum
+            }, [])
             setValue(newData);
         }
     }, [data, isSuccess]);
 
     const handleChange = (index: number) => {
         const newValue = [...value];
-        newValue[index].completed = !newValue[index].completed
-        setValue(newValue)
+        newValue[index].completed = !newValue[index].completed;
+        setValue(newValue);
     };
 
     const handleDeleteClick = () => {
@@ -48,7 +47,7 @@ export const TodoComponent = () => {
     };
 
     const handleAddClick = () => {
-        setAddTask(!addTask)
+        setAddTask(!addTask);
     };
 
     const onAddTask = (task: iTask) => {
@@ -57,7 +56,7 @@ export const TodoComponent = () => {
         task.userId = newValue[0].userId;
         newValue.push(task);
         setValue(newValue);
-        setAddTask(false)
+        setAddTask(false);
     };
 
     return (

@@ -1,17 +1,13 @@
 import styled from 'styled-components';
 
-export const Checkmark = styled.span`
+export const Checkmark = styled.span<{checked: boolean}>`
   position: absolute;
   top: 0;
   left: 0;
   height: 20px;
   width: 20px;
   border-radius: 6px;
-  background-color: #4F5565;
-  
-  :hover {
-    background: rgba(255, 132, 105, 0.2);
-  }
+  background-color: ${props => (props.checked? '#FF8469 !important': '#4F5565')};
   
   &:after {
     content: "";
@@ -35,10 +31,6 @@ export const Input = styled.input`
   cursor: pointer;
   height: 0;
   width: 0;
-  
-  :checked ~ ${Checkmark} {
-    background-color: #FF8469;
-  }
   
   :checked ~ ${Checkmark}:after {
     display: block;

@@ -1,7 +1,11 @@
 import React from 'react';
-import {iCheckbox} from '../../types/task';
 import {Checkmark, ContainerCheckbox, Input} from './checkbox.styles';
 
+interface iCheckbox {
+    index: number
+    checked: boolean
+    onChange: (index: number) => void
+}
 
 export const Checkbox: React.FC<iCheckbox> = ({checked, onChange, index}) => {
     return (
@@ -10,7 +14,7 @@ export const Checkbox: React.FC<iCheckbox> = ({checked, onChange, index}) => {
                    checked={checked}
                    onChange={() => onChange(index)}
             />
-            <Checkmark></Checkmark>
+            <Checkmark checked={checked}></Checkmark>
         </ContainerCheckbox>
     );
-}
+};

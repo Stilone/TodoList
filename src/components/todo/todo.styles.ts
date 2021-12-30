@@ -9,7 +9,7 @@ export const Global = createGlobalStyle`
     }
     @font-face {
       font-family: 'Montserrat', sans-serif;
-      src: url("/fonts/Montserrat-SemiBold.ttf") format('ttf');
+      src: url('/fonts/Montserrat-SemiBold.ttf') format('ttf');
       font-weight: 600;
     }
     margin: 0;
@@ -59,6 +59,7 @@ export const Container = styled.div`
 `;
 
 export const Todo = styled.div`
+  margin-bottom: 20px;
   width: 420px;
   min-height: 540px;
   background-color: #252E42;
@@ -116,5 +117,7 @@ export const TodoButtonDelete = styled.button`
 `;
 
 export const Author = styled.label`
-    
+    margin-left: 110px;
+    width: 20px;
+    color: #252E42;
 `;

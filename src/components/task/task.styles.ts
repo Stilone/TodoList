@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Checkmark} from '../checkbox/checkbox.styles'
+import {Checkmark} from '../checkbox/checkbox.styles';
 
 export const TodoTask = styled.ul`
   font-size: 16px;
@@ -30,7 +30,7 @@ export const Task = styled.li`
   &:hover ${Checkmark} {
     background: rgba(255, 132, 105, 0.2);
   }
-`
+`;
 
 
 
