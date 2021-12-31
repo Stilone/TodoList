@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useQuery} from 'react-query';
 import {iTask} from '../../types/task';
 import {getTask} from '../../api/tasks';
-import {TasksComponent} from '../task/task.component';
+import {TasksComponent} from '../tasks/tasks.component';
 import {LoadingComponent} from '../loading/loading.component';
 import {AddTaskComponent} from '../addTask/addTask.component';
 import {
