@@ -1,34 +1,4 @@
-import styled, {createGlobalStyle} from 'styled-components';
-
-export const Global = createGlobalStyle`
-  * {
-    @font-face {
-      font-family: 'Montserrat', sans-serif;
-      src: url('/fonts/Montserrat-Regular.ttf') format('ttf');
-      font-weight: 400;
-    }
-    @font-face {
-      font-family: 'Montserrat', sans-serif;
-      src: url('/fonts/Montserrat-SemiBold.ttf') format('ttf');
-      font-weight: 600;
-    }
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    span, label {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 400;
-    }
-  }
-`;
-
-export const Main = styled.div`
-  display: flex;
-  justify-content: center;
-  background-color: #010920;
-  height: 100vh;
-`;
+import styled from 'styled-components';
 
 export const LastContainer = styled.div`
   width: 341.86px;
@@ -58,7 +28,7 @@ export const Container = styled.div`
   position: relative;
 `;
 
-export const Todo = styled.div`
+export const Content = styled.div`
   margin-bottom: 20px;
   width: 420px;
   min-height: 540px;
@@ -68,7 +38,7 @@ export const Todo = styled.div`
   position: relative;
 `;
 
-export const TodoTitle = styled.span`
+export const Title = styled.span`
   display: block;
   font-weight: bold;
   font-size: 28px;
@@ -76,7 +46,7 @@ export const TodoTitle = styled.span`
   margin-bottom: 30px;
 `;
 
-export const TodoButton = styled.button`
+export const AddButton = styled.button`
   font-weight: 500;
   font-size: 14px;
   border: none;
@@ -96,7 +66,7 @@ export const TodoButton = styled.button`
   }
 `;
 
-export const TodoButtonDelete = styled.button`
+export const DeleteButton = styled.button`
   font-weight: 500;
   font-size: 14px;
   border: none;

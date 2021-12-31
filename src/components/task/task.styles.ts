@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {Checkmark} from '../checkbox/checkbox.styles';
 
-export const TodoTask = styled.ul`
+export const Container = styled.ul`
   font-size: 16px;
   font-weight: 500;
 `;

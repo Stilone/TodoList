@@ -1,16 +1,16 @@
 import React from 'react';
 import {iTask} from '../../types/task';
 import {Checkbox} from '../checkbox/checkbox.component';
-import {TodoTask, Task, Text} from './task.styles';
+import {Container, Task, Text} from './task.styles';
 
 interface iTodoProps {
     value: iTask[];
     onChange: (index: number) => void;
 }
 
-export const TaskComponent: React.FC<iTodoProps> = ({value, onChange}) => {
+export const TasksComponent: React.FC<iTodoProps> = ({value, onChange}) => {
     return (
-        <TodoTask>
+        <Container>
             {value.map((item, index) => {
                 return <Task key={index}>
                     <label>
@@ -24,6 +24,6 @@ export const TaskComponent: React.FC<iTodoProps> = ({value, onChange}) => {
                     </label>
                 </Task>
             })}
-        </TodoTask>
+        </Container>
     );
 };

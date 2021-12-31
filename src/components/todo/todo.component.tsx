@@ -2,19 +2,18 @@ import React, {useEffect, useState} from 'react';
 import {useQuery} from 'react-query';
 import {iTask} from '../../types/task';
 import {getTask} from '../../api/tasks';
-import {TaskComponent} from '../task/task.component';
+import {TasksComponent} from '../task/task.component';
 import {LoadingComponent} from '../loading/loading.component';
 import {AddTaskComponent} from '../addTask/addTask.component';
 import {
     Author,
     Container,
     LastContainer,
-    Main,
     NextContainer,
-    Todo,
-    TodoButton,
-    TodoButtonDelete,
-    TodoTitle,
+    Content,
+    AddButton,
+    DeleteButton,
+    Title,
 } from './todo.styles';
 
 export const TodoComponent = () => {
@@ -60,25 +59,23 @@ export const TodoComponent = () => {
     };
 
     return (
-        <Main>
             <Container>
                 <LastContainer/>
                 <NextContainer/>
-                <Todo>
-                    <TodoTitle>Todo list</TodoTitle>
-                    <TodoButton onClick={handleAddClick}>ADD</TodoButton>
-                    <TodoButtonDelete onClick={handleDeleteClick}>DELETE</TodoButtonDelete>
+                <Content>
+                    <Title>Todo list</Title>
+                    <AddButton onClick={handleAddClick}>ADD</AddButton>
+                    <DeleteButton onClick={handleDeleteClick}>DELETE</DeleteButton>
                     {addTask?
                         <AddTaskComponent onAddTask={onAddTask}/>:
                         null
                     }
                     {isLoading?
                         <LoadingComponent />:
-                        <TaskComponent value={value} onChange={handleChange}/>
+                        <TasksComponent value={value} onChange={handleChange}/>
                     }
-                </Todo>
+                </Content>
                 <Author>&copy; {new Date().getFullYear()}. Dmitriy Astashin</Author>
             </Container>
-        </Main>
     );
 };
