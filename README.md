@@ -1,4 +1,4 @@
-# Todo-List
+# Todo List
 
 Todo-List is a versatile application designed for creating and deleting notes, as well as fetching notes from a server.
 
