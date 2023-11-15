@@ -16,7 +16,7 @@ To run the application locally, follow these simple steps:
 ## How to Run the Project
 
 1. Clone the repository: `git clone https://github.com/Stilone/Todo-List.git`
-2. Navigate to the project directory: `cd Serch-book`
+2. Navigate to the project directory: `cd Todo-List`
 3. Install dependencies: `npm install`
 4. Start the project: `npm start`
 
