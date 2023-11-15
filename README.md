@@ -20,7 +20,6 @@ To run the application locally, follow these simple steps:
 3. Install dependencies: `npm install`
 4. Start the project: `npm start`
 
-## Screenshots
 ### Main Page
 
 ![image](https://github.com/Stilone/TodoList/assets/54247765/06ffb052-3c09-4ef9-8593-84aa57d2e7e3)
