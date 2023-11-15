@@ -41,7 +41,6 @@ This to-do list project is not only a practical implementation of task managemen
 
 Feel free to explore the codebase and leave feedback or suggestions. After all, every project is an opportunity to learn and grow. Forward and higher! 🚀
 
-
 ---
 
 Happy reading! 📚😊✨
