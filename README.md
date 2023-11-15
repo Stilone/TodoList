@@ -25,7 +25,7 @@ To run the application locally, follow these simple steps:
 ![image](https://github.com/Stilone/TodoList/assets/54247765/06ffb052-3c09-4ef9-8593-84aa57d2e7e3)
 
 
-## Additional Notes
+## Description:
 List of Project Portfolio tasks
 Every respectable programmer should have at least one project from the to-do list in their portfolio, and surprisingly, it took me some time to get to it. However, when faced with a test task that requires making a to-do list, I found a great opportunity to delve into this important project. The task presented itself in the form of a Figma design, and, to my surprise, the result was more than satisfactory.
 
