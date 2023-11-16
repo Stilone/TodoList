@@ -15,7 +15,7 @@ To run the application locally, follow these simple steps.
 
 You can either follow the link:
  
-🌐 --- 🌐
+🌐 https://stilone.github.io/TodoList 🌐
 
 Or expand the project your computer:
 
