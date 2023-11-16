@@ -10,15 +10,21 @@ Todo-List is a versatile application designed for creating and deleting notes, a
 - **API:** Integration with external APIs for data retrieval and manipulation. 🌐
 - **Styled-components:** A library for styling React components with tagged template literals. 💅
 
-## Getting Started
-To run the application locally, follow these simple steps:
+## Getting Started:
+To run the application locally, follow these simple steps.
 
-## How to Run the Project
+You can either follow the link:
+ 
+🌐 --- 🌐
+
+Or expand the project your computer:
 
 1. Clone the repository: `git clone https://github.com/Stilone/Todo-List.git`
 2. Navigate to the project directory: `cd Todo-List`
 3. Install dependencies: `npm install`
 4. Start the project: `npm start`
+
+## Screenshots:
 
 ### Main Page
 
